@@ -6,7 +6,7 @@ import ReactTooltip from "react-tooltip";
 const Header = (props) => {
   return (
     <header className={styles.headerContainer}>
-      <img src={logo} alt="logo" data-tip="Nothing to watch here -_-"></img>
+      <img src={logo} alt="logo" data-tip="Keep walking pal"></img>
       <ReactTooltip />
     </header>
   );

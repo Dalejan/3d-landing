@@ -7,7 +7,7 @@ import { GET_MODELS } from "../../graphql/queries/fetchModels";
 
 const Home = (props) => {
   const [models, setModels] = useState([]);
-  const { loading, error, data } = useQuery(GET_MODELS);
+  const { loading, data } = useQuery(GET_MODELS);
 
   useEffect(() => {
     if (!loading && data) {

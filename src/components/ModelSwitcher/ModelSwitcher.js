@@ -3,9 +3,6 @@ import styles from "./ModelSwitcher.module.scss";
 
 import ModelLoader from "./ModelLoader/ModelLoader";
 import { server } from "../../graphql/client";
-import Zoom from "react-reveal/Zoom";
-
-//import Hacha from "../../assets/3d/Hacha.gltf";
 
 const ModelSwitcher = (props) => {
   const { models } = props;
@@ -24,7 +21,7 @@ const ModelSwitcher = (props) => {
       currentModel + 1 < modelsSrc.length
         ? setCurrentModel((currentModel) => currentModel + 1)
         : setCurrentModel(0);
-    }, 5000);
+    }, 10000);
     updateModel();
 
     return () => {
