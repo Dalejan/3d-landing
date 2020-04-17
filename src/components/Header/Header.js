@@ -1,12 +1,13 @@
 import React from "react";
 import logo from "../../logo.svg";
 import styles from "./Header.module.scss";
+import ReactTooltip from "react-tooltip";
 
 const Header = (props) => {
   return (
     <header className={styles.headerContainer}>
-      <h1>HOLI</h1>
-      <img src={logo} alt="logo"></img>Header
+      <img src={logo} alt="logo" data-tip="Nothing to watch here -_-"></img>
+      <ReactTooltip />
     </header>
   );
 };

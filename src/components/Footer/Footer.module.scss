@@ -1,0 +1,31 @@
+@import "../../styles/sass/variables";
+
+.footerContainer {
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid $line-color;
+  color: $principal-color;
+
+  .sign {
+    opacity: 0.2;
+    transition: all 300ms ease-in-out;
+  }
+  .sign:hover {
+    user-select: none;
+    opacity: 1;
+  }
+  .socialNetworks {
+    font-weight: 600;
+    margin-left: auto;
+    display: flex;
+    width: 80px;
+    justify-content: space-between;
+    align-items: center;
+    a {
+      text-decoration: none;
+      color: $principal-color;
+    }
+  }
+}

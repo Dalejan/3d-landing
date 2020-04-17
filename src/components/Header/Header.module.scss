@@ -1,4 +1,11 @@
+@import "../../styles/sass/variables";
+
 .headerContainer {
+  padding: 20px 50px;
   position: sticky;
   top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid $line-color;
 }

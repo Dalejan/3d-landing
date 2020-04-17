@@ -3,13 +3,13 @@ import PropTypes from "prop-types";
 import styles from "./ModelLoader.module.scss";
 
 const ModelLoader = (props) => {
-  const { src, exposure, name, poster, theRef } = props;
+  const { src, exposure, name, poster, modelRef } = props;
 
-  const ModelLoaderStyle = {};
+  const ModelLoaderStyle = { zIndex: 1, height: "358px" };
   return (
     <div className={styles.modelLoaderContainer}>
       <model-viewer
-        ref={theRef}
+        ref={modelRef}
         style={{ "--poster-color": "rgba(1,1,1,0)", ...ModelLoaderStyle }}
         camera-orbit="45deg 55deg"
         src={src}

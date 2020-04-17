@@ -1,15 +1,14 @@
 import React from "react";
 
-import styles from "./App.module.scss";
-import Header from "./components/Header/Header";
-import ModelSwitcher from "./containers/ModelSwitcher/ModelSwitcher";
+import { client } from "./graphql/client";
+import { ApolloProvider } from "@apollo/client";
+import Layout from "./containers/Layout/Layout";
 
 function App() {
   return (
-    <div className={styles.appContainer}>
-      <Header />
-      <ModelSwitcher />
-    </div>
+    <ApolloProvider client={client}>
+      <Layout></Layout>
+    </ApolloProvider>
   );
 }
 

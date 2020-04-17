@@ -1,0 +1,19 @@
+@import "../../styles/sass/variables";
+
+.homeContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.homeContainer::after {
+  content: "";
+  height: 100vh;
+  width: 1px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  background: $line-color;
+}
