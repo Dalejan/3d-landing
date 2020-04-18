@@ -5,7 +5,7 @@ import ModelLoader from "./ModelLoader/ModelLoader";
 import { server } from "../../graphql/client";
 
 const ModelSwitcher = (props) => {
-  const { models } = props;
+  const { models, loading } = props;
   const modelsSrc = models.map((model) => `${server}static/${model.file}`);
   const modelRef = useRef(null);
   const [currentModel, setCurrentModel] = useState(0);
@@ -63,15 +63,6 @@ const ModelSwitcher = (props) => {
         name="barril"
       ></ModelLoader>
 
-      <div className={styles.modelInfoContainer}>
-        {models[currentModel] && (
-          <>
-            <h2>{models[currentModel].name}</h2>
-            <p>{models[currentModel].description}</p>
-            <button>Learn More</button>
-          </>
-        )}
-      </div>
       <div className={styles.controlsContainer}>
         <span
           role="button"
@@ -83,6 +74,24 @@ const ModelSwitcher = (props) => {
           onClick={() => handleChangeModel("next")}
           className={styles.nextButton}
         ></span>
+      </div>
+
+      <div className={styles.modelInfoContainer}>
+        {!loading && models[currentModel] && (
+          <>
+            <h2>{models[currentModel].name}</h2>
+            <p>{models[currentModel].description}</p>
+            <a href={`${server}static/${models[currentModel].file}`}>
+              Download it !
+            </a>
+          </>
+        )}
+        {loading && (
+          <div className={styles.loadingSection}>
+            <p></p>
+            <p></p>
+          </div>
+        )}
       </div>
     </div>
   );

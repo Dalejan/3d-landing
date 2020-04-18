@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../logo.svg";
+import logo from "../../cube.svg";
 import styles from "./Header.module.scss";
 import ReactTooltip from "react-tooltip";
 

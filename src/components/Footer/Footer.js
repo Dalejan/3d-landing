@@ -15,7 +15,7 @@ const Footer = (props) => {
         <a href="https://www.linkedin.com/in/david-alejandro-qui%C3%B1onez-mosquera-331b71171/">
           Li
         </a>
-        <a href="https://github.com/Dalejan">Gh</a>
+        <a href="https://github.com/Dalejan/3d-landing">Gh</a>
       </div>
     </footer>
   );

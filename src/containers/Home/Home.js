@@ -7,7 +7,7 @@ import { GET_MODELS } from "../../graphql/queries/fetchModels";
 
 const Home = (props) => {
   const [models, setModels] = useState([]);
-  const { loading, data } = useQuery(GET_MODELS);
+  const { loading, data, error } = useQuery(GET_MODELS);
 
   useEffect(() => {
     if (!loading && data) {
@@ -17,7 +17,14 @@ const Home = (props) => {
 
   return (
     <main className={styles.homeContainer}>
-      <ModelSwitcher models={models} />
+      {!error ? (
+        <ModelSwitcher models={models} loading={loading} />
+      ) : (
+        <div className={styles.errorContainer}>
+          Ups it seems im still playing with this page, if the error persist
+          please contact me. Maybe somebody drop coffee on the server.
+        </div>
+      )}
     </main>
   );
 };

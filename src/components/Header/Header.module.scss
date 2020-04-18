@@ -3,9 +3,29 @@
 .headerContainer {
   padding: 20px 50px;
   position: sticky;
+  background: #76726f9c;
+  z-index: 3;
   top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid $line-color;
+  img {
+    max-width: 50px;
+    height: auto;
+    filter: invert(100%) sepia(12%) saturate(1352%) hue-rotate(87deg)
+      brightness(119%) contrast(119%);
+  }
+}
+
+@media (min-width: $small-bp) {
+  .headerContainer {
+    background-color: #76726f00;
+  }
+}
+
+@media (min-width: $large-bp) {
+  .headerContainer {
+    padding: 20px $white-layout-space;
+  }
 }
