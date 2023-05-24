@@ -11,7 +11,7 @@
     "@testing-library/user-event": "^7.2.1",
     "graphql": "^15.0.0",
     "graphql-tag": "^2.10.3",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-reveal": "^1.2.2",
