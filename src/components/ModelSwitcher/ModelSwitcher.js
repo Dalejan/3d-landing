@@ -6,7 +6,7 @@ import { server } from "../../graphql/client";
 
 const ModelSwitcher = (props) => {
   const { models, loading } = props;
-  const modelsSrc = models.map((model) => `${server}static/${model.file}`);
+  const modelsSrc = models.map((model) => `${server}/public/${model.file}`);
   const modelRef = useRef(null);
   const [currentModel, setCurrentModel] = useState(0);
 
@@ -35,18 +35,24 @@ const ModelSwitcher = (props) => {
         currentModel > 0
           ? setCurrentModel((currentModel) => currentModel - 1)
           : setCurrentModel(modelsSrc.length - 1);
-        updateModel();
-
         break;
       case "next":
         currentModel < modelsSrc.length - 1
           ? setCurrentModel(currentModel + 1)
           : setCurrentModel(0);
-        updateModel();
         break;
       default:
         break;
     }
+    updateModel();
+  };
+
+  const handlePrev = () => {
+    handleChangeModel("prev");
+  };
+
+  const handleNext = () => {
+    handleChangeModel("next");
   };
 
   return (
@@ -66,12 +72,12 @@ const ModelSwitcher = (props) => {
       <div className={styles.controlsContainer}>
         <span
           role="button"
-          onClick={() => handleChangeModel("prev")}
+          onClick={handlePrev}
           className={styles.prevButton}
         ></span>
         <span
           role="button"
-          onClick={() => handleChangeModel("next")}
+          onClick={handleNext}
           className={styles.nextButton}
         ></span>
       </div>

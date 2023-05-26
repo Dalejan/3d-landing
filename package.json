@@ -4,21 +4,19 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@apollo/client": "^3.0.0-beta.43",
-    "@apollo/react-hooks": "^3.1.5",
+    "@apollo/client": "^3.7.14",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
-    "graphql": "^15.0.0",
-    "graphql-tag": "^2.10.3",
-    "node-sass": "^7.0.3",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "graphql": "^15.8.0",
+    "graphql-tag": "^2.12.6",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
     "react-reveal": "^1.2.2",
     "react-scripts": "5.0.1",
     "react-spring": "^8.0.27",
-    "react-tooltip": "^4.2.3",
-    "react-transition-group": "^4.3.0"
+    "react-transition-group": "^4.4.5",
+    "sass": "^1.62.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -41,5 +39,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }
